@@ -18,10 +18,8 @@ a { color: inherit; text-decoration: none; }
 .site-header { position: fixed; inset: 0 0 auto; z-index: 50; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px clamp(20px, 5vw, 64px); background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); transition: background 0.25s ease, box-shadow 0.25s ease; }
 .site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 18px; background: linear-gradient(100deg, #3f8f3b 0 15%, #0b62a8 15% 54%, #3f8f3b 54% 100%); clip-path: polygon(0 0, 100% 0, 100% 22%, 0 100%); }
 .site-header.scrolled, .inner-header { background: rgba(255,255,255,0.97); box-shadow: 0 14px 32px rgba(7, 32, 78, 0.12); }
-.brand { display: inline-flex; align-items: center; min-width: 260px; color: #0b4f9e; font-size: clamp(1.45rem, 2.4vw, 2.25rem); font-style: italic; font-weight: 900; letter-spacing: -0.08em; text-transform: uppercase; }
-.brand-green { color: var(--green); }
-.brand-orbit { width: 44px; height: 56px; margin: 0 -12px 0 -4px; border: 4px solid #0c5ba7; border-left-color: transparent; border-radius: 50%; transform: rotate(-10deg); position: relative; }
-.brand-orbit::after { content: ""; position: absolute; top: -4px; right: 3px; width: 12px; height: 45px; border-right: 4px solid var(--green); border-radius: 50%; }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; }
+.brand-logo { height: 58px; width: auto; display: block; }
 .main-nav { display: flex; align-items: center; gap: clamp(10px, 2vw, 28px); }
 .main-nav a { color: var(--navy); font-size: 0.95rem; font-weight: 800; }
 .main-nav a:hover, .main-nav a.active { color: var(--blue); }
@@ -113,7 +111,6 @@ a { color: inherit; text-decoration: none; }
 .quote-form input:focus, .quote-form textarea:focus, .quote-form select:focus { outline: 3px solid rgba(73,162,47,0.18); border-color: var(--green); }
 
 @media (max-width: 1080px) {
-  .brand { min-width: 220px; }
   .main-nav { gap: 14px; }
   .main-nav a { font-size: 0.86rem; }
   .page-grid.four { grid-template-columns: repeat(2, 1fr); }
@@ -136,9 +133,11 @@ a { color: inherit; text-decoration: none; }
   .section-title span { display: none; }
 }
 
+@media (max-width: 768px) {
+  .brand-logo { height: 46px; }
+}
+
 @media (max-width: 560px) {
-  .brand { min-width: 0; font-size: 1.28rem; }
-  .brand-orbit { width: 34px; height: 42px; border-width: 3px; margin: 0 -10px 0 -4px; }
   .hero h1 { font-size: 2.55rem; }
   .hero-subtitle { font-size: 1.26rem; }
   .section { padding: 30px 18px; }

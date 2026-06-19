@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">SEEING POWER official logo</title>
-  <desc id="desc">SEEING POWER blue and green wordmark with circular energy swoosh.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="seeingpower-logo-title seeingpower-logo-desc">
+  <title id="seeingpower-logo-title">SEEING POWER logo</title>
+  <desc id="seeingpower-logo-desc">Blue SEEING wordmark with green POWER text and blue-green circular energy swoosh.</desc>
   <rect width="1200" height="360" fill="none"/>
   <g transform="skewX(-10)">
-    <text x="50" y="185" font-family="Arial Black, Arial, sans-serif" font-size="150" font-weight="900" fill="#005eb8" letter-spacing="-8">SEEING</text>
-    <text x="670" y="265" font-family="Arial Black, Arial, sans-serif" font-size="88" font-weight="900" fill="#55a630" letter-spacing="36">POWER</text>
+    <text x="45" y="187" font-family="Arial Black, Impact, Arial, sans-serif" font-size="154" font-weight="900" fill="#005eb8" letter-spacing="-10">SEEING</text>
+    <text x="672" y="272" font-family="Arial Black, Impact, Arial, sans-serif" font-size="90" font-weight="900" fill="#55a630" letter-spacing="38">POWER</text>
   </g>
-  <path d="M420 95 C 560 -40 760 35 760 185 C 760 305 610 355 490 320" fill="none" stroke="#005eb8" stroke-width="18" stroke-linecap="round"/>
-  <path d="M772 92 C 858 205 794 314 660 348" fill="none" stroke="#55a630" stroke-width="18" stroke-linecap="round"/>
-  <path d="M395 226 C 384 286 418 326 475 342" fill="none" stroke="#005eb8" stroke-width="9" stroke-linecap="round"/>
+  <path d="M424 91 C 553 -25 742 25 759 171 C 776 316 602 365 438 321" fill="none" stroke="#005eb8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M748 84 C 858 200 786 316 646 349" fill="none" stroke="#55a630" stroke-width="18" stroke-linecap="round"/>
+  <path d="M391 230 C 376 287 405 333 470 347" fill="none" stroke="#005eb8" stroke-width="8" stroke-linecap="round"/>
 </svg>
