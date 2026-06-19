@@ -1,5 +1,7 @@
 # Video assets
 
-The homepage banner now uses an externally hosted industrial photo URL so this repository does not need to commit a binary hero image.
+The homepage hero uses this tracked MP4 file:
 
-Keep this folder for future optional video assets only; no video file is required for the current homepage hero.
+`assets/videos/seeingpower-hero.mp4`
+
+This repository keeps the hero video as an existing tracked asset path so the site can deploy without introducing a new binary upload in the latest change.
