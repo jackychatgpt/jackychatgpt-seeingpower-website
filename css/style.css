@@ -15,11 +15,11 @@ html { scroll-behavior: smooth; }
 body { margin: 0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: #f6fbff; line-height: 1.6; }
 a { color: inherit; text-decoration: none; }
 
-.site-header { position: fixed; inset: 0 0 auto; z-index: 50; min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px clamp(20px, 5vw, 64px); background: rgba(255,255,255,0.78); backdrop-filter: blur(12px); transition: background 0.25s ease, box-shadow 0.25s ease; }
-.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 18px; background: linear-gradient(100deg, #3f8f3b 0 15%, #0b62a8 15% 54%, #3f8f3b 54% 100%); clip-path: polygon(0 0, 100% 0, 100% 22%, 0 100%); }
-.site-header.scrolled, .inner-header { background: rgba(255,255,255,0.97); box-shadow: 0 14px 32px rgba(7, 32, 78, 0.12); }
-.brand { display: inline-flex; align-items: center; flex: 0 0 auto; width: clamp(190px, 22vw, 300px); min-width: 190px; }
-.brand-logo { display: block; width: 100%; height: auto; max-height: 70px; object-fit: contain; }
+.site-header { position: fixed; inset: 0 0 auto; z-index: 50; min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px clamp(20px, 5vw, 64px); background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); box-shadow: 0 12px 30px rgba(7, 32, 78, 0.08); transition: background 0.25s ease, box-shadow 0.25s ease; }
+.site-header::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 14px; background: linear-gradient(100deg, rgba(63,143,59,0.82) 0 15%, rgba(11,98,168,0.9) 15% 54%, rgba(63,143,59,0.82) 54% 100%); clip-path: polygon(0 0, 100% 0, 100% 22%, 0 100%); opacity: 0.9; }
+.site-header.scrolled, .inner-header { background: rgba(255,255,255,0.985); box-shadow: 0 14px 32px rgba(7, 32, 78, 0.12); }
+.brand { display: inline-flex; align-items: center; flex: 0 0 auto; width: clamp(176px, 19vw, 258px); min-width: 176px; height: 58px; overflow: hidden; border-radius: 8px; }
+.brand-logo { display: block; width: 100%; height: 100%; object-fit: contain; object-position: left center; transform: scale(1.14); transform-origin: left center; mix-blend-mode: multiply; filter: saturate(1.05) contrast(1.04); opacity: 0.98; }
 .main-nav { display: flex; align-items: center; gap: clamp(10px, 2vw, 28px); }
 .main-nav a { color: var(--navy); font-size: 0.95rem; font-weight: 800; }
 .main-nav a:hover, .main-nav a.active { color: var(--blue); }
@@ -111,14 +111,16 @@ a { color: inherit; text-decoration: none; }
 .quote-form input:focus, .quote-form textarea:focus, .quote-form select:focus { outline: 3px solid rgba(73,162,47,0.18); border-color: var(--green); }
 
 @media (max-width: 1080px) {
-  .brand { width: 230px; min-width: 180px; }
+  .brand { width: 218px; min-width: 168px; height: 54px; }
   .main-nav { gap: 14px; }
   .main-nav a { font-size: 0.86rem; }
   .page-grid.four { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 900px) {
-  .site-header { min-height: 76px; padding: 14px 18px; }
+  .site-header { min-height: 76px; padding: 12px 18px; }
+  .brand { width: 188px; min-width: 152px; height: 50px; }
+  .brand-logo { transform: scale(1.12); opacity: 0.98; }
   .nav-toggle { display: block; }
   .main-nav { position: absolute; top: 76px; left: 18px; right: 18px; display: none; flex-direction: column; align-items: stretch; padding: 16px; border-radius: 18px; background: rgba(255,255,255,0.98); box-shadow: 0 18px 45px rgba(7,24,39,0.16); }
   .main-nav.open { display: flex; }
@@ -135,12 +137,12 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 768px) {
-  .brand-logo { height: 46px; }
+  .brand-logo { height: 100%; }
 }
 
 @media (max-width: 560px) {
-  .brand { width: 178px; min-width: 0; }
-  .brand-logo { max-height: 56px; }
+  .brand { width: 160px; min-width: 0; height: 44px; }
+  .brand-logo { max-height: none; transform: scale(1.1); }
   .hero h1 { font-size: 2.55rem; }
   .hero-subtitle { font-size: 1.26rem; }
   .section { padding: 30px 18px; }
