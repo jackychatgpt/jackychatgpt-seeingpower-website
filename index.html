@@ -17,75 +17,122 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=6" />
+  <link rel="stylesheet" href="css/style.css?v=8" />
   <style>
+    /* Clean hero rebuild: remove the old banner layers and show the photo/video-like background clearly. */
+    .hero {
+      position: relative;
+      min-height: 760px;
+      padding: 176px clamp(22px, 7vw, 96px) 95px;
+      background: #061329 !important;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
     .hero::before {
+      content: "";
+      position: absolute;
       inset: 0;
-      background-image: url('assets/images/hero-industrial-energy.svg?v=subtle20260619b');
+      z-index: 0;
+      background-image: url('assets/images/hero-industrial-energy.svg?v=clean-video-bg-20260619');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
       opacity: 1;
-      transform: none;
+      filter: none;
+      transform: translateZ(0);
       animation: none;
-      filter: saturate(1.04) contrast(1.03);
       will-change: auto;
     }
 
-    .hero::after { z-index: 7; }
-
-    .hero-overlay {
-      background:
-        linear-gradient(90deg, rgba(2, 12, 38, 0.96) 0%, rgba(3, 24, 64, 0.9) 30%, rgba(4, 54, 110, 0.55) 53%, rgba(6, 105, 176, 0.12) 74%, rgba(255, 255, 255, 0.02) 100%),
-        radial-gradient(circle at 28% 48%, rgba(15, 128, 214, 0.28), transparent 34%);
+    .hero::after,
+    .network-pattern,
+    .energy-lines,
+    .hero-proof {
+      display: none !important;
     }
 
-    .network-pattern { opacity: 0.14; }
-    .energy-lines { display: none !important; }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg,
+          rgba(2, 9, 24, 0.74) 0%,
+          rgba(2, 11, 30, 0.56) 25%,
+          rgba(3, 16, 38, 0.24) 43%,
+          rgba(3, 16, 38, 0.04) 65%,
+          rgba(3, 16, 38, 0.00) 100%);
+    }
 
     .hero-copy {
       position: relative;
-      z-index: 10;
-      max-width: 700px;
-      padding: 30px 32px 32px;
-      border-radius: 26px;
-      background: linear-gradient(90deg, rgba(2, 16, 44, 0.72), rgba(2, 16, 44, 0.46));
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      box-shadow: 0 24px 58px rgba(0, 20, 60, 0.28);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
-      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
+      z-index: 2;
+      width: min(650px, 100%);
+      padding: 32px 34px 34px;
+      border-radius: 24px;
+      background: linear-gradient(90deg, rgba(3, 12, 32, 0.68), rgba(3, 16, 42, 0.48));
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      box-shadow: 0 24px 70px rgba(0, 12, 34, 0.32);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      text-shadow: 0 4px 22px rgba(0, 0, 0, 0.62);
     }
 
     .hero h1 {
-      text-shadow: 0 5px 26px rgba(0, 0, 0, 0.66);
+      color: #fff;
+      text-shadow: 0 6px 28px rgba(0, 0, 0, 0.70);
     }
 
-    .hero-description,
+    .hero-kicker,
     .hero-subtitle,
-    .hero-kicker {
-      text-shadow: 0 3px 16px rgba(0, 0, 0, 0.62);
+    .hero-description {
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.68);
     }
 
-    .hero-proof {
-      z-index: 10;
-      background: rgba(2, 16, 44, 0.62);
-      border-color: rgba(255, 255, 255, 0.14);
-      backdrop-filter: blur(4px);
-      -webkit-backdrop-filter: blur(4px);
+    .hero-description {
+      color: rgba(255, 255, 255, 0.94);
     }
 
-    @media (max-width: 1120px) {
-      .hero::before { background-position: center bottom; }
-      .hero-copy { padding: 24px; max-width: 640px; }
+    @media (max-width: 900px) {
+      .hero {
+        min-height: 710px;
+        padding: 150px 18px 64px;
+      }
+      .hero::before {
+        background-position: 60% center;
+      }
+      .hero-overlay {
+        background: linear-gradient(180deg,
+          rgba(2, 9, 24, 0.62) 0%,
+          rgba(2, 9, 24, 0.54) 38%,
+          rgba(2, 9, 24, 0.42) 100%);
+      }
+      .hero-copy {
+        width: 100%;
+        max-width: 560px;
+        padding: 24px 22px 26px;
+        border-radius: 20px;
+        background: rgba(3, 12, 32, 0.66);
+      }
     }
 
     @media (max-width: 560px) {
-      .hero::before { background-position: 58% bottom; }
-      .hero-overlay {
-        background: linear-gradient(180deg, rgba(2, 12, 38, 0.94) 0%, rgba(3, 20, 55, 0.84) 48%, rgba(3, 30, 72, 0.72) 100%);
+      .hero {
+        min-height: 680px;
+        padding-top: 132px;
       }
-      .hero-copy { padding: 20px; border-radius: 18px; }
+      .hero::before {
+        background-size: auto 100%;
+        background-position: 64% center;
+      }
+      .hero h1 {
+        font-size: clamp(2.6rem, 14vw, 4.2rem);
+      }
+      .hero-actions .btn {
+        width: 100%;
+      }
     }
   </style>
   <script type="application/ld+json">
@@ -128,8 +175,6 @@
   <main>
     <section class="hero" id="home">
       <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="network-pattern" aria-hidden="true"></div>
-      <div class="energy-lines" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="hero-copy reveal">
         <p class="hero-kicker">Industrial Materials · Cummins & Perkins Power · Global Supply</p>
         <h1>THE PULSE OF INDUSTRY</h1>
@@ -140,11 +185,6 @@
           <a class="btn btn-green" href="contact.html#get-quote">Get a Quote</a>
           <a class="btn btn-light" href="products.html">View Products</a>
         </div>
-      </div>
-      <div class="hero-proof" aria-label="SeeingPower capabilities">
-        <span>Organic Peroxides</span>
-        <span>Cummins & Perkins Power</span>
-        <span>Solar Power</span>
       </div>
     </section>
 
