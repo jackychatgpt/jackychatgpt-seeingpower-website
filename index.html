@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260619-final" />
+  <link rel="stylesheet" href="css/style.css?v=20260619-video-live-2" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,11 +56,13 @@
   </header>
 
   <main>
-    <section class="hero hero-video" id="home">
-      <video class="hero-video-bg" autoplay muted loop playsinline preload="auto">
-        <source src="assets/videos/seeingpower-hero.mp4?v=20260619-final" type="video/mp4" />
+    <section class="hero hero-video" id="home" data-video-hero aria-label="SeeingPower industrial video banner">
+      <video class="hero-video-bg" autoplay muted loop playsinline preload="auto" aria-hidden="true">
+        <source src="./assets/videos/seeingpower-hero.mp4?v=20260619-video-live-2" type="video/mp4" />
       </video>
-      <div class="hero-readable-layer"></div>
+      <div class="hero-video-fallback" aria-hidden="true"></div>
+      <div class="hero-motion-layer" aria-hidden="true"></div>
+      <div class="hero-readable-layer" aria-hidden="true"></div>
       <div class="hero-copy reveal">
         <p class="hero-kicker">Industrial Materials · Cummins & Perkins Power · Global Supply</p>
         <h1>THE PULSE OF INDUSTRY</h1>
@@ -126,6 +128,6 @@
   </main>
 
   <footer class="site-footer"><p>© <span data-year></span> SeeingPower. Taizhou ShengLing Technology Co., Ltd. All rights reserved.</p></footer>
-  <script src="js/main.js?v=video-hero-20260619-final"></script>
+  <script src="js/main.js?v=video-hero-20260619-live-2"></script>
 </body>
 </html>
