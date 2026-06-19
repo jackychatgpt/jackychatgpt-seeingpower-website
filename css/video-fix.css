@@ -1,0 +1,94 @@
+/* SeeingPower homepage hero live fix: keep the video as motion, but never allow a blank white banner. */
+.hero.hero-video {
+  background:
+    radial-gradient(circle at 74% 26%, rgba(72, 195, 255, 0.38), transparent 24%),
+    radial-gradient(circle at 86% 76%, rgba(78, 190, 61, 0.20), transparent 24%),
+    linear-gradient(112deg, #031224 0%, #063062 43%, #0a5b98 100%) !important;
+}
+
+.hero.hero-video::before {
+  display: block !important;
+  content: "" !important;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+  background-image:
+    linear-gradient(90deg, rgba(0, 9, 25, 0.88) 0%, rgba(0, 17, 40, 0.55) 38%, rgba(0, 32, 68, 0.12) 70%, rgba(0, 24, 54, 0.18) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 620'%3E%3Cg fill='none' stroke='%23bfeaff' stroke-opacity='.34' stroke-width='4'%3E%3Cpath d='M42 472h1105M90 410h940M150 350h860M260 292h720'/%3E%3Cpath d='M187 190v282M230 128v344M275 220v252M406 84v388M462 150v322M645 110v362M705 178v294M885 70v402M963 124v348M1035 214v258'/%3E%3Cpath d='M170 190h78M386 84h96M625 110h96M862 70h122'/%3E%3Ccircle cx='208' cy='128' r='38'/%3E%3Ccircle cx='434' cy='84' r='46'/%3E%3Ccircle cx='665' cy='110' r='44'/%3E%3Ccircle cx='922' cy='70' r='52'/%3E%3Cpath d='M120 472c95-70 172-70 266 0M520 472c102-86 198-86 306 0M820 350c74-64 146-64 222 0'/%3E%3C/g%3E%3Cg fill='%2306162f' fill-opacity='.40'%3E%3Crect x='175' y='190' width='66' height='282' rx='16'/%3E%3Crect x='386' y='84' width='96' height='388' rx='20'/%3E%3Crect x='625' y='110' width='96' height='362' rx='20'/%3E%3Crect x='862' y='70' width='122' height='402' rx='24'/%3E%3Crect x='1010' y='214' width='58' height='258' rx='14'/%3E%3C/g%3E%3Cg stroke='%235bd7ff' stroke-opacity='.55' stroke-width='5'%3E%3Cpath d='M0 520c210-18 318-5 472 28s274 40 448 12 230-48 310-38'/%3E%3Cpath d='M0 565c190-8 300 12 430 38s286 18 420-15 232-52 350-30'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(180deg, rgba(1, 10, 23, 0.05) 0%, rgba(1, 10, 23, 0.76) 100%);
+  background-repeat: no-repeat;
+  background-size: cover, min(980px, 70vw) auto, cover;
+  background-position: center, right 50% bottom 26px, center;
+}
+
+.hero.hero-video::after {
+  display: block !important;
+  content: "" !important;
+  position: absolute;
+  left: -12%;
+  right: -12%;
+  bottom: 13%;
+  height: 220px;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.88;
+  mix-blend-mode: screen;
+  transform: skewY(-4deg);
+  background:
+    linear-gradient(90deg, transparent 0 8%, rgba(65, 207, 255, 0.00) 18%, rgba(65, 207, 255, 0.80) 37%, rgba(255, 184, 70, 0.74) 55%, rgba(88, 213, 255, 0.56) 70%, transparent 92%),
+    repeating-linear-gradient(180deg, transparent 0 28px, rgba(105, 218, 255, 0.28) 29px 32px, transparent 33px 52px);
+  filter: blur(0.2px);
+  animation: seeingPowerHeroSweep 6.5s ease-in-out infinite alternate;
+}
+
+.hero-video-bg {
+  z-index: 1 !important;
+  opacity: 0.16 !important;
+  mix-blend-mode: screen !important;
+  filter: saturate(1.55) contrast(1.15) brightness(0.62) !important;
+}
+
+.hero-video-fallback {
+  z-index: 0 !important;
+  opacity: 1 !important;
+  background:
+    radial-gradient(circle at 78% 32%, rgba(51, 180, 255, 0.34), transparent 28%),
+    linear-gradient(112deg, #021021 0%, #052c5d 52%, #084f86 100%) !important;
+}
+
+.hero-motion-layer,
+.hero-readable-layer {
+  z-index: 3 !important;
+}
+
+.hero-readable-layer {
+  background:
+    linear-gradient(90deg, rgba(0, 8, 22, 0.72) 0%, rgba(0, 12, 28, 0.50) 34%, rgba(0, 23, 52, 0.16) 67%, rgba(0, 28, 60, 0.10) 100%) !important;
+}
+
+.hero-copy {
+  z-index: 5 !important;
+}
+
+@keyframes seeingPowerHeroSweep {
+  from { transform: translateX(-3%) skewY(-4deg); opacity: 0.70; }
+  to { transform: translateX(4%) skewY(-4deg); opacity: 0.95; }
+}
+
+@media (max-width: 900px) {
+  .hero.hero-video::before {
+    background-size: cover, 980px auto, cover;
+    background-position: center, 57% bottom 22px, center;
+  }
+
+  .hero.hero-video::after {
+    bottom: 9%;
+    height: 170px;
+  }
+
+  .hero-readable-layer {
+    background: linear-gradient(180deg, rgba(0, 8, 22, 0.20) 0%, rgba(0, 11, 27, 0.42) 44%, rgba(0, 8, 22, 0.76) 100%) !important;
+  }
+}
