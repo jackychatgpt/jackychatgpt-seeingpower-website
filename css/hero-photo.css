@@ -1,0 +1,65 @@
+/* SeeingPower real photo hero.
+   Uses the uploaded industrial plant photo only; no video, SVG drawing, or blue fallback overlay. */
+.hero.hero-photo {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 720px !important;
+  padding: 150px 5vw 64px !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+  background-image: url("../assets/images/seeingpower-hero-photo.webp?v=20260619-real-photo-1") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: normal !important;
+}
+
+.hero.hero-photo::before,
+.hero.hero-photo::after,
+.hero-video-bg,
+.hero-video-fallback,
+.hero-motion-layer,
+.hero-readable-layer,
+.hero-overlay {
+  display: none !important;
+  content: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: none !important;
+}
+
+.hero.hero-photo .hero-copy {
+  position: relative !important;
+  z-index: 2 !important;
+  max-width: 650px !important;
+  background: rgba(3, 12, 32, 0.24) !important;
+  border: 1px solid rgba(255, 255, 255, 0.26) !important;
+  box-shadow: 0 20px 48px rgba(0, 12, 34, 0.18) !important;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.88) !important;
+  backdrop-filter: none !important;
+}
+
+.hero.hero-photo .hero-kicker {
+  background: rgba(0, 0, 0, 0.18) !important;
+}
+
+@media (max-width: 900px) {
+  .hero.hero-photo {
+    min-height: 710px !important;
+    padding: 140px 18px 56px !important;
+    background-position: center center !important;
+  }
+
+  .hero.hero-photo .hero-copy {
+    max-width: 560px !important;
+    padding: 24px 22px 26px !important;
+    background: rgba(3, 12, 32, 0.30) !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero.hero-photo {
+    min-height: 680px !important;
+    padding-top: 132px !important;
+  }
+}
