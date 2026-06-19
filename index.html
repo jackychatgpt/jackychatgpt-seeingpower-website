@@ -17,119 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=9" />
-  <style>
-    .hero {
-      position: relative;
-      min-height: 760px;
-      padding: 176px clamp(22px, 7vw, 96px) 95px;
-      background: #ffffff !important;
-      overflow: hidden;
-      isolation: isolate;
-    }
-
-    .hero::before,
-    .hero::after,
-    .network-pattern,
-    .energy-lines,
-    .hero-proof,
-    .industrial-scene {
-      display: none !important;
-      content: none !important;
-      background: none !important;
-    }
-
-    .hero-video-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      background: #ffffff;
-      filter: saturate(1.06) contrast(1.04) brightness(1.04);
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      pointer-events: none;
-      background: linear-gradient(90deg,
-        rgba(255, 255, 255, 0.02) 0%,
-        rgba(255, 255, 255, 0.00) 45%,
-        rgba(255, 255, 255, 0.00) 100%);
-    }
-
-    .hero-copy {
-      position: relative;
-      z-index: 3;
-      width: min(650px, 100%);
-      padding: 30px 32px 32px;
-      border-radius: 24px;
-      background: linear-gradient(90deg, rgba(3, 12, 32, 0.62), rgba(3, 16, 42, 0.38));
-      border: 1px solid rgba(255, 255, 255, 0.24);
-      box-shadow: 0 24px 60px rgba(0, 12, 34, 0.28);
-      backdrop-filter: none;
-      -webkit-backdrop-filter: none;
-      text-shadow: 0 4px 22px rgba(0, 0, 0, 0.78);
-    }
-
-    .hero h1 {
-      color: #fff;
-      text-shadow: 0 6px 28px rgba(0, 0, 0, 0.82);
-    }
-
-    .hero-kicker,
-    .hero-subtitle,
-    .hero-description {
-      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.78);
-    }
-
-    .hero-description {
-      color: rgba(255, 255, 255, 0.96);
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        min-height: 710px;
-        padding: 150px 18px 64px;
-      }
-      .hero-video-bg {
-        object-position: 60% center;
-      }
-      .hero-overlay {
-        background: linear-gradient(180deg,
-          rgba(255, 255, 255, 0.00) 0%,
-          rgba(255, 255, 255, 0.00) 45%,
-          rgba(3, 12, 32, 0.08) 100%);
-      }
-      .hero-copy {
-        width: 100%;
-        max-width: 560px;
-        padding: 24px 22px 26px;
-        border-radius: 20px;
-        background: rgba(3, 12, 32, 0.68);
-      }
-    }
-
-    @media (max-width: 560px) {
-      .hero {
-        min-height: 680px;
-        padding-top: 132px;
-      }
-      .hero-video-bg {
-        object-position: 64% center;
-      }
-      .hero h1 {
-        font-size: clamp(2.6rem, 14vw, 4.2rem);
-      }
-      .hero-actions .btn {
-        width: 100%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css?v=20260619-final" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -168,17 +56,19 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero hero-video" id="home">
       <video class="hero-video-bg" autoplay muted loop playsinline preload="auto">
-        <source src="assets/videos/seeingpower_light_streaks_subtle_10s.mp4?v=20260619c" type="video/mp4" />
+        <source src="assets/videos/seeingpower-hero.mp4?v=20260619-final" type="video/mp4" />
       </video>
-      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-readable-layer"></div>
       <div class="hero-copy reveal">
         <p class="hero-kicker">Industrial Materials · Cummins & Perkins Power · Global Supply</p>
         <h1>THE PULSE OF INDUSTRY</h1>
         <span class="title-rule" aria-hidden="true"></span>
         <p class="hero-subtitle">Power running. Materials flowing.</p>
-        <p class="hero-description">SeeingPower connects industrial peroxide materials, Cummins & Perkins power systems and solar power solutions with reliable export support for global manufacturing projects.</p>
+        <p class="hero-description">
+          SeeingPower connects industrial peroxide materials, Cummins & Perkins power systems and solar power solutions with reliable export support for global manufacturing projects.
+        </p>
         <div class="hero-actions">
           <a class="btn btn-green" href="contact.html#get-quote">Get a Quote</a>
           <a class="btn btn-light" href="products.html">View Products</a>
@@ -236,6 +126,6 @@
   </main>
 
   <footer class="site-footer"><p>© <span data-year></span> SeeingPower. Taizhou ShengLing Technology Co., Ltd. All rights reserved.</p></footer>
-  <script src="js/main.js?v=video-hero-20260619c"></script>
+  <script src="js/main.js?v=video-hero-20260619-final"></script>
 </body>
 </html>

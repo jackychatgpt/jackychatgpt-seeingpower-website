@@ -1,9 +1,7 @@
 # Hero video assets
 
-Upload the homepage hero video here with this exact filename:
+The homepage hero uses this tracked MP4 file:
 
-`seeingpower_light_streaks_subtle_10s.mp4`
+`assets/videos/seeingpower-hero.mp4`
 
-The homepage already references:
-
-`assets/videos/seeingpower_light_streaks_subtle_10s.mp4`
+This repository keeps the hero video as an existing tracked asset path so the site can deploy without introducing a new binary upload in the latest change.
