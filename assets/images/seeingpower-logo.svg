@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" role="img" aria-labelledby="seeingpower-logo-title seeingpower-logo-desc">
+  <title id="seeingpower-logo-title">SEEING POWER logo</title>
+  <desc id="seeingpower-logo-desc">Blue SEEING wordmark with green POWER text and blue-green circular energy swoosh.</desc>
+  <rect width="1200" height="360" fill="none"/>
+  <g transform="skewX(-10)">
+    <text x="45" y="187" font-family="Arial Black, Impact, Arial, sans-serif" font-size="154" font-weight="900" fill="#005eb8" letter-spacing="-10">SEEING</text>
+    <text x="672" y="272" font-family="Arial Black, Impact, Arial, sans-serif" font-size="90" font-weight="900" fill="#55a630" letter-spacing="38">POWER</text>
+  </g>
+  <path d="M424 91 C 553 -25 742 25 759 171 C 776 316 602 365 438 321" fill="none" stroke="#005eb8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M748 84 C 858 200 786 316 646 349" fill="none" stroke="#55a630" stroke-width="18" stroke-linecap="round"/>
+  <path d="M391 230 C 376 287 405 333 470 347" fill="none" stroke="#005eb8" stroke-width="8" stroke-linecap="round"/>
+</svg>
