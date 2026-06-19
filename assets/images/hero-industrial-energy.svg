@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Industrial plant and energy pulse illustration">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dff5ff"/>
+      <stop offset="0.45" stop-color="#8ccdf3"/>
+      <stop offset="1" stop-color="#f4fbff"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="0.45" stop-color="#b9c9d7"/>
+      <stop offset="1" stop-color="#647c93"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0b68b7" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#13a6ff" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#61d34d" stop-opacity="0.72"/>
+    </linearGradient>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <circle cx="1230" cy="155" r="120" fill="#fff" opacity="0.78"/>
+  <path d="M0 650 C220 600 460 670 710 620 C990 565 1210 605 1600 535 L1600 900 L0 900 Z" fill="#edf7ff" opacity="0.9"/>
+  <path d="M0 720 C260 675 465 725 760 690 C1080 650 1280 680 1600 630 L1600 900 L0 900 Z" fill="#dbeefa" opacity="0.86"/>
+
+  <g opacity="0.22" stroke="#0b68b7" stroke-width="2" fill="none">
+    <path d="M735 150 L842 226 L972 188 L1100 280 L1245 235 L1390 335"/>
+    <circle cx="735" cy="150" r="7" fill="#0b68b7"/>
+    <circle cx="842" cy="226" r="7" fill="#0b68b7"/>
+    <circle cx="972" cy="188" r="7" fill="#0b68b7"/>
+    <circle cx="1100" cy="280" r="7" fill="#0b68b7"/>
+    <circle cx="1245" cy="235" r="7" fill="#49a22f"/>
+    <circle cx="1390" cy="335" r="7" fill="#49a22f"/>
+  </g>
+
+  <g transform="translate(610 285)">
+    <rect x="0" y="300" width="850" height="88" rx="8" fill="#6f879c" opacity="0.32"/>
+    <rect x="42" y="235" width="310" height="150" rx="8" fill="url(#steel)" stroke="#436077" stroke-width="3"/>
+    <path d="M42 235 L145 170 L352 235 Z" fill="#8399ab" stroke="#436077" stroke-width="3"/>
+    <rect x="82" y="268" width="52" height="54" fill="#eaf7ff" opacity="0.82"/>
+    <rect x="164" y="268" width="52" height="54" fill="#eaf7ff" opacity="0.82"/>
+    <rect x="246" y="268" width="52" height="54" fill="#eaf7ff" opacity="0.82"/>
+
+    <rect x="395" y="188" width="160" height="197" rx="8" fill="url(#steel)" stroke="#436077" stroke-width="3"/>
+    <rect x="430" y="70" width="54" height="315" rx="20" fill="url(#steel)" stroke="#436077" stroke-width="3"/>
+    <rect x="522" y="15" width="64" height="370" rx="22" fill="url(#steel)" stroke="#436077" stroke-width="3"/>
+    <rect x="620" y="118" width="48" height="267" rx="18" fill="url(#steel)" stroke="#436077" stroke-width="3"/>
+    <path d="M456 70 C482 35 520 28 548 55" stroke="#7997ad" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.42"/>
+    <path d="M553 12 C592 -25 653 -18 682 24" stroke="#7997ad" stroke-width="15" stroke-linecap="round" fill="none" opacity="0.36"/>
+    <path d="M640 118 C665 86 707 85 735 118" stroke="#7997ad" stroke-width="10" stroke-linecap="round" fill="none" opacity="0.34"/>
+
+    <rect x="600" y="292" width="270" height="92" rx="18" fill="#26384b" stroke="#0e2238" stroke-width="4"/>
+    <rect x="628" y="314" width="112" height="46" rx="7" fill="#dbe8f1"/>
+    <circle cx="802" cy="338" r="37" fill="#0f1f33"/>
+    <circle cx="802" cy="338" r="20" fill="#73889c"/>
+    <path d="M25 210 H180 C260 210 320 142 420 145 H770" stroke="#9fb3c4" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.74"/>
+    <path d="M10 262 H242 C310 262 352 225 425 225 H800" stroke="#617c93" stroke-width="12" stroke-linecap="round" fill="none" opacity="0.62"/>
+  </g>
+
+  <g filter="url(#softGlow)" opacity="0.95">
+    <path d="M690 470 C780 405 860 410 925 468 C990 526 1070 510 1138 445 C1202 385 1292 392 1365 470" stroke="url(#blueGlow)" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M725 514 H815 L840 468 L885 565 L930 442 L965 514 H1085 L1115 482 L1150 538 L1194 454 L1235 514 H1370" stroke="#49d05a" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+  </g>
+</svg>
