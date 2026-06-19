@@ -1,4 +1,4 @@
-# Hero video assets
+# Video assets
 
 The homepage hero uses this tracked MP4 file:
 
