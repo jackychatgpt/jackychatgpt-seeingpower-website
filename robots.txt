@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jackychatgpt.github.io/jackychatgpt-seeingpower-website/sitemap.xml
