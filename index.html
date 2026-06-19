@@ -17,8 +17,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=20260619-video-live-2" />
-  <link rel="stylesheet" href="css/hero-photo.css?v=20260619-real-photo-1" />
+  <link rel="stylesheet" href="css/style.css?v=20260619-force-photo-3" />
+  <link rel="stylesheet" href="css/hero-photo.css?v=20260619-force-photo-3" />
+  <style id="force-real-photo-banner">
+    #home.hero,
+    #home.hero.hero-photo,
+    section.hero.hero-photo {
+      background-color: #f3f8fb !important;
+      background-image: url('https://jackychatgpt.github.io/jackychatgpt-seeingpower-website/assets/images/seeingpower-hero-photo.webp?v=force-photo-20260619-3') !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+      background-blend-mode: normal !important;
+      isolation: isolate !important;
+    }
+    #home.hero::before,
+    #home.hero::after,
+    #home .hero-video-bg,
+    #home .hero-video-fallback,
+    #home .hero-motion-layer,
+    #home .hero-readable-layer,
+    #home .hero-overlay,
+    #home .network-pattern,
+    #home .energy-lines,
+    #home .industrial-scene {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+      content: none !important;
+      background: none !important;
+    }
+    #home.hero .hero-copy {
+      background: rgba(3, 12, 32, 0.34) !important;
+      border: 1px solid rgba(255, 255, 255, 0.28) !important;
+      box-shadow: 0 24px 58px rgba(0, 0, 0, 0.20) !important;
+      backdrop-filter: none !important;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header" data-header>
@@ -105,6 +140,6 @@
   </main>
 
   <footer class="site-footer"><p>© <span data-year></span> SeeingPower. Taizhou ShengLing Technology Co., Ltd. All rights reserved.</p></footer>
-  <script src="js/main.js?v=real-photo-hero-20260619-1"></script>
+  <script src="js/main.js?v=force-photo-hero-20260619-3"></script>
 </body>
 </html>
