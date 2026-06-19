@@ -1,12 +1,18 @@
-/* SeeingPower HD hero background fix.
-   The MP4 is the primary background. All old blue/green overlays are disabled. */
+/* SeeingPower static HD hero fix.
+   This file intentionally disables the video layer so the hero never falls back to a plain blue screen. */
 .hero.hero-video {
-  background: #071d3a !important;
+  background-color: #d9f3ff !important;
+  background-image: url("../assets/images/hero-hd.svg?v=20260619-static-hd-1") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-blend-mode: normal !important;
   overflow: hidden !important;
 }
 
 .hero.hero-video::before,
 .hero.hero-video::after,
+.hero-video-bg,
 .hero-video-fallback,
 .hero-motion-layer,
 .hero-readable-layer,
@@ -18,45 +24,26 @@
   background: none !important;
 }
 
-.hero-video-bg {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-width: 100% !important;
-  min-height: 100% !important;
-  object-fit: cover !important;
-  object-position: center center !important;
-  transform: none !important;
-  filter: none !important;
-  pointer-events: none !important;
-  background: transparent !important;
-}
-
 .hero-copy {
   position: relative !important;
   z-index: 2 !important;
-  background: rgba(3, 12, 32, 0.18) !important;
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 0 18px 44px rgba(0, 12, 34, 0.14) !important;
+  background: rgba(3, 12, 32, 0.22) !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+  box-shadow: 0 18px 44px rgba(0, 12, 34, 0.16) !important;
   text-shadow: 0 3px 18px rgba(0, 0, 0, 0.9) !important;
   backdrop-filter: none !important;
 }
 
 .hero-kicker {
-  background: rgba(0, 0, 0, 0.14) !important;
+  background: rgba(0, 0, 0, 0.16) !important;
 }
 
 @media (max-width: 900px) {
-  .hero-video-bg {
-    object-position: center center !important;
+  .hero.hero-video {
+    background-position: center center !important;
   }
 
   .hero-copy {
-    background: rgba(3, 12, 32, 0.26) !important;
+    background: rgba(3, 12, 32, 0.30) !important;
   }
 }
