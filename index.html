@@ -20,52 +20,72 @@
   <link rel="stylesheet" href="css/style.css?v=6" />
   <style>
     .hero::before {
-      background-image: url('assets/images/hero-industrial-energy.svg?v=20260619');
-      background-size: min(86vw, 1320px) auto;
-      animation: heroVideoDrift 8s ease-in-out infinite alternate, heroVideoGlow 4.6s ease-in-out infinite;
-      will-change: transform, filter, opacity;
+      inset: 0;
+      background-image: url('assets/images/hero-industrial-energy.svg?v=subtle20260619b');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      opacity: 1;
+      transform: none;
+      animation: none;
+      filter: saturate(1.04) contrast(1.03);
+      will-change: auto;
     }
+
     .hero::after { z-index: 7; }
-    .energy-lines {
-      filter: drop-shadow(0 0 18px rgba(80, 214, 82, 0.72)) drop-shadow(0 0 28px rgba(28, 155, 255, 0.38));
+
+    .hero-overlay {
+      background:
+        linear-gradient(90deg, rgba(2, 12, 38, 0.96) 0%, rgba(3, 24, 64, 0.9) 30%, rgba(4, 54, 110, 0.55) 53%, rgba(6, 105, 176, 0.12) 74%, rgba(255, 255, 255, 0.02) 100%),
+        radial-gradient(circle at 28% 48%, rgba(15, 128, 214, 0.28), transparent 34%);
     }
-    .energy-lines::before {
-      height: 7px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.94), rgba(35,171,255,0.96), rgba(92,217,77,0.98), transparent);
-      animation: energySweep 1.85s linear infinite;
+
+    .network-pattern { opacity: 0.14; }
+    .energy-lines { display: none !important; }
+
+    .hero-copy {
+      position: relative;
+      z-index: 10;
+      max-width: 700px;
+      padding: 30px 32px 32px;
+      border-radius: 26px;
+      background: linear-gradient(90deg, rgba(2, 16, 44, 0.72), rgba(2, 16, 44, 0.46));
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 24px 58px rgba(0, 20, 60, 0.28);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55);
     }
-    .energy-lines::after {
-      content: "";
-      position: absolute;
-      left: 4%;
-      right: 2%;
-      top: 38px;
-      height: 94px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.26), rgba(80,213,82,0.52), transparent);
-      clip-path: polygon(0 54%, 12% 54%, 17% 40%, 23% 66%, 30% 22%, 37% 74%, 45% 54%, 58% 54%, 64% 42%, 70% 64%, 77% 30%, 84% 54%, 100% 54%, 100% 60%, 84% 60%, 77% 36%, 70% 70%, 64% 48%, 58% 60%, 45% 60%, 37% 80%, 30% 28%, 23% 72%, 17% 46%, 12% 60%, 0 60%);
-      opacity: 0.78;
-      animation: energyPulseLine 1.45s ease-in-out infinite;
+
+    .hero h1 {
+      text-shadow: 0 5px 26px rgba(0, 0, 0, 0.66);
     }
-    .energy-lines span { animation-duration: 1.28s; }
-    @keyframes heroVideoDrift {
-      0% { transform: translate3d(0, 0, 0) scale(1.015); }
-      100% { transform: translate3d(-28px, -12px, 0) scale(1.055); }
+
+    .hero-description,
+    .hero-subtitle,
+    .hero-kicker {
+      text-shadow: 0 3px 16px rgba(0, 0, 0, 0.62);
     }
-    @keyframes heroVideoGlow {
-      0%, 100% { filter: saturate(1.05) brightness(1); opacity: 0.96; }
-      50% { filter: saturate(1.22) brightness(1.08); opacity: 1; }
+
+    .hero-proof {
+      z-index: 10;
+      background: rgba(2, 16, 44, 0.62);
+      border-color: rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
     }
-    @keyframes energyPulseLine {
-      0%, 100% { transform: translateX(-2%) scaleY(0.78); opacity: 0.38; }
-      50% { transform: translateX(2%) scaleY(1.18); opacity: 0.92; }
-    }
+
     @media (max-width: 1120px) {
-      .hero::before { background-position: 58% bottom; background-size: 1060px auto; opacity: 0.72; }
+      .hero::before { background-position: center bottom; }
+      .hero-copy { padding: 24px; max-width: 640px; }
     }
+
     @media (max-width: 560px) {
-      .hero::before { background-position: 60% bottom; background-size: 780px auto; opacity: 0.56; }
-      .energy-lines { display: block; width: 82vw; right: 4vw; top: 64%; height: 118px; opacity: 0.48; }
-      .energy-lines span { width: 14px; height: 14px; }
+      .hero::before { background-position: 58% bottom; }
+      .hero-overlay {
+        background: linear-gradient(180deg, rgba(2, 12, 38, 0.94) 0%, rgba(3, 20, 55, 0.84) 48%, rgba(3, 30, 72, 0.72) 100%);
+      }
+      .hero-copy { padding: 20px; border-radius: 18px; }
     }
   </style>
   <script type="application/ld+json">
