@@ -17,7 +17,57 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=4" />
+  <link rel="stylesheet" href="css/style.css?v=6" />
+  <style>
+    .hero::before {
+      background-image: url('assets/images/hero-industrial-energy.svg?v=20260619');
+      background-size: min(86vw, 1320px) auto;
+      animation: heroVideoDrift 8s ease-in-out infinite alternate, heroVideoGlow 4.6s ease-in-out infinite;
+      will-change: transform, filter, opacity;
+    }
+    .hero::after { z-index: 7; }
+    .energy-lines {
+      filter: drop-shadow(0 0 18px rgba(80, 214, 82, 0.72)) drop-shadow(0 0 28px rgba(28, 155, 255, 0.38));
+    }
+    .energy-lines::before {
+      height: 7px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.94), rgba(35,171,255,0.96), rgba(92,217,77,0.98), transparent);
+      animation: energySweep 1.85s linear infinite;
+    }
+    .energy-lines::after {
+      content: "";
+      position: absolute;
+      left: 4%;
+      right: 2%;
+      top: 38px;
+      height: 94px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.26), rgba(80,213,82,0.52), transparent);
+      clip-path: polygon(0 54%, 12% 54%, 17% 40%, 23% 66%, 30% 22%, 37% 74%, 45% 54%, 58% 54%, 64% 42%, 70% 64%, 77% 30%, 84% 54%, 100% 54%, 100% 60%, 84% 60%, 77% 36%, 70% 70%, 64% 48%, 58% 60%, 45% 60%, 37% 80%, 30% 28%, 23% 72%, 17% 46%, 12% 60%, 0 60%);
+      opacity: 0.78;
+      animation: energyPulseLine 1.45s ease-in-out infinite;
+    }
+    .energy-lines span { animation-duration: 1.28s; }
+    @keyframes heroVideoDrift {
+      0% { transform: translate3d(0, 0, 0) scale(1.015); }
+      100% { transform: translate3d(-28px, -12px, 0) scale(1.055); }
+    }
+    @keyframes heroVideoGlow {
+      0%, 100% { filter: saturate(1.05) brightness(1); opacity: 0.96; }
+      50% { filter: saturate(1.22) brightness(1.08); opacity: 1; }
+    }
+    @keyframes energyPulseLine {
+      0%, 100% { transform: translateX(-2%) scaleY(0.78); opacity: 0.38; }
+      50% { transform: translateX(2%) scaleY(1.18); opacity: 0.92; }
+    }
+    @media (max-width: 1120px) {
+      .hero::before { background-position: 58% bottom; background-size: 1060px auto; opacity: 0.72; }
+    }
+    @media (max-width: 560px) {
+      .hero::before { background-position: 60% bottom; background-size: 780px auto; opacity: 0.56; }
+      .energy-lines { display: block; width: 82vw; right: 4vw; top: 64%; height: 118px; opacity: 0.48; }
+      .energy-lines span { width: 14px; height: 14px; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -81,8 +131,8 @@
     <section class="section what-we-do" id="what-we-do">
       <div class="section-title"><span></span><h2>What We Do</h2><span></span></div>
       <div class="service-grid reveal">
-        <article class="service-item"><span class="icon icon-power"></span><div><h3>Cummins & Perkins Power Systems</h3><p>Industrial power equipment, backup power and project-based energy supply support.</p></div></article>
         <article class="service-item"><span class="icon icon-material"></span><div><h3>Industrial Peroxide & Materials</h3><p>BPO, TBPB, DCBP, TBHP, BIBP and related organic peroxides for composites, polymers and manufacturing.</p></div></article>
+        <article class="service-item"><span class="icon icon-power"></span><div><h3>Cummins & Perkins Power Systems</h3><p>Industrial power equipment, backup power and project-based energy supply support.</p></div></article>
         <article class="service-item"><span class="icon icon-global"></span><div><h3>Global Sourcing & Export Support</h3><p>Clear quotation, practical logistics coordination and long-term supply support for overseas buyers.</p></div></article>
       </div>
     </section>
