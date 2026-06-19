@@ -134,6 +134,10 @@ a { color: inherit; text-decoration: none; }
   .section-title span { display: none; }
 }
 
+@media (max-width: 768px) {
+  .brand-logo { height: 46px; }
+}
+
 @media (max-width: 560px) {
   .brand { width: 178px; min-width: 0; }
   .brand-logo { max-height: 56px; }
