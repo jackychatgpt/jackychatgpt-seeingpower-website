@@ -1,0 +1,84 @@
+/* Hero styles for assets/hero/hero.html
+   - Import or copy these rules into your main stylesheet if you prefer.
+   - Designed to be neutral and "official" looking; tweak brand colors and spacing to match your site.
+*/
+
+/* reset/ensure no default gap above the hero */
+html, body { height:100%; margin:0; padding:0; }
+
+/* hero layout */
+.hero {
+  position:relative;
+  width:100%;
+  min-height: clamp(420px, 60vh, 820px); /* responsive height */
+  overflow:hidden;
+  display:block;
+  color:#fff;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* make the <img> fill the hero area (accessible & responsive) */
+.hero picture, .hero img.hero-img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position: center right; /* keep focus on the facility and glassware */
+  z-index:0;
+}
+
+/* semi-transparent overlay for contrast so text reads as 'official' */
+.hero-overlay {
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(2,18,45,0.30) 0%, rgba(0,0,0,0.45) 100%);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* content */
+.hero-content {
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  padding: clamp(1rem, 4vw, 3rem);
+  margin-left: clamp(1rem, 5vw, 6rem); /* move text away from right edge so it sits over glassware */
+  top:50%;
+  transform:translateY(-50%);
+}
+
+/* typography */
+.hero-title {
+  margin:0 0 .5rem 0;
+  font-size: clamp(1.6rem, 4.4vw, 3.2rem);
+  line-height:1.05;
+  letter-spacing: -0.01em;
+  font-weight:700;
+}
+
+.hero-subtitle {
+  margin:0 0 1rem 0;
+  font-size: clamp(.95rem, 2.2vw, 1.125rem);
+  color: rgba(255,255,255,0.95);
+  max-width: 60ch;
+}
+
+/* CTA */
+.btn-primary {
+  display:inline-block;
+  padding:.7rem 1.25rem;
+  background:#0077ff;
+  color:#fff;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  box-shadow: 0 8px 26px rgba(0,119,255,0.18);
+}
+
+/* mobile tweaks */
+@media (max-width:720px) {
+  .hero-content { margin-left:1rem; padding:1.25rem; }
+  .hero-title { font-size:1.6rem; }
+  .hero-subtitle { font-size:0.95rem; max-width:100%; }
+}

@@ -1,0 +1,21 @@
+<!-- Hero section fragment: place this near the top of your <body> (before any header if you want no content above it). Link or import the hero.css in your main stylesheet or include this file's CSS in your site.
+
+Usage: copy the <section> into your page where you want the hero to appear, or include this fragment via templating.
+
+NOTE: Place your banner image at /assets/images/banner-1200.jpg (and optionally banner-1600.jpg, banner-2560.jpg and .webp variants) as referenced below.
+-->
+<section class="hero" role="banner" aria-label="Site hero">
+  <picture>
+    <source srcset="/assets/images/banner-2560.webp 2560w, /assets/images/banner-1600.webp 1600w, /assets/images/banner-1200.webp 1200w" type="image/webp">
+    <source srcset="/assets/images/banner-2560.jpg 2560w, /assets/images/banner-1600.jpg 1600w, /assets/images/banner-1200.jpg 1200w" type="image/jpeg">
+    <img src="/assets/images/banner-1200.jpg" alt="Industrial chemical plant at sunrise with laboratory glassware in the foreground and streaks of motion light" class="hero-img" loading="eager" decoding="async">
+  </picture>
+
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content container">
+    <h1 class="hero-title">Company / Project Name</h1>
+    <p class="hero-subtitle">Modern industrial & scientific solutions — trusted, safe, and innovative.</p>
+    <a class="btn-primary" href="/about">Learn more</a>
+  </div>
+</section>
