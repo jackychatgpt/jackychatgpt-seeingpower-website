@@ -29,10 +29,22 @@ window.addEventListener('scroll', updateHeader, { passive: true });
 
 const hero = document.querySelector('#home.hero');
 if (hero) {
+  // remove an old inline style if present
   const oldInlineHeroStyle = document.querySelector('#force-real-photo-banner');
   if (oldInlineHeroStyle) oldInlineHeroStyle.remove();
+
   hero.classList.add('hero-photo');
-  hero.querySelectorAll('.hero-bg-svg, .hero-bg-img, .hero-video-bg, .hero-video-fallback, .hero-motion-layer, .hero-readable-layer, .hero-overlay, .hero-trails').forEach((el) => el.remove());
+
+  // Safely remove legacy background layers but do NOT remove our .hero-industrial-bg
+  try {
+    hero.querySelectorAll('.hero-bg-svg, .hero-bg-img, .hero-video-bg, .hero-video-fallback, .hero-motion-layer, .hero-readable-layer, .hero-overlay, .hero-trails').forEach((el) => {
+      if (el && !el.classList.contains('hero-industrial-bg')) el.remove();
+    });
+  } catch (e) {
+    // swallow errors — non-critical cleanup
+    console.warn('hero cleanup error', e);
+  }
+
   if (!hero.querySelector('.hero-industrial-bg')) {
     const bg = document.createElement('div');
     bg.className = 'hero-industrial-bg';
@@ -41,7 +53,10 @@ if (hero) {
     hero.insertBefore(bg, hero.firstChild);
   } else {
     const bg = hero.querySelector('.hero-industrial-bg');
-    bg.innerHTML = '<div class="light-points">' + '<span></span>'.repeat(12) + '</div>';
+    // ensure the decorative light points are present
+    if (!bg.querySelector('.light-points')) {
+      bg.innerHTML = '<div class="light-points">' + '<span></span>'.repeat(12) + '</div>';
+    }
   }
 }
 
