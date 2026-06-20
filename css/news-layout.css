@@ -1,0 +1,72 @@
+/* Page-specific layout for News & Industrial Insights */
+.news-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  align-items: stretch;
+  width: min(1180px, calc(100% - 36px));
+  gap: 22px;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 24px !important;
+}
+
+.news-card .eyebrow {
+  min-height: 18px;
+}
+
+.news-card h2 {
+  min-height: 74px;
+  margin-bottom: 14px !important;
+  font-size: clamp(1.08rem, 1.35vw, 1.35rem);
+  line-height: 1.22 !important;
+}
+
+.news-card p {
+  font-size: 0.95rem;
+  line-height: 1.62 !important;
+}
+
+.news-card .compact-list {
+  margin-top: 2px;
+  margin-bottom: 22px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.news-card .small-btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 16px;
+    width: min(100%, calc(100% - 28px));
+  }
+  .news-card {
+    padding: 18px !important;
+  }
+  .news-card h2 {
+    min-height: 88px;
+    font-size: 1rem;
+  }
+  .news-card p,
+  .news-card .compact-list {
+    font-size: 0.88rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .news-grid {
+    grid-template-columns: 1fr !important;
+    width: 100%;
+  }
+  .news-card h2 {
+    min-height: 0;
+    font-size: 1.15rem;
+  }
+}
