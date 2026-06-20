@@ -32,13 +32,16 @@ if (hero) {
   const oldInlineHeroStyle = document.querySelector('#force-real-photo-banner');
   if (oldInlineHeroStyle) oldInlineHeroStyle.remove();
   hero.classList.add('hero-photo');
-  hero.querySelectorAll('.hero-bg-svg, .hero-bg-img, .hero-video-bg, .hero-video-fallback, .hero-motion-layer, .hero-readable-layer, .hero-overlay').forEach((el) => el.remove());
+  hero.querySelectorAll('.hero-bg-svg, .hero-bg-img, .hero-video-bg, .hero-video-fallback, .hero-motion-layer, .hero-readable-layer, .hero-overlay, .hero-trails').forEach((el) => el.remove());
   if (!hero.querySelector('.hero-industrial-bg')) {
     const bg = document.createElement('div');
     bg.className = 'hero-industrial-bg';
     bg.setAttribute('aria-hidden', 'true');
-    bg.innerHTML = '<div class="hero-trails"></div><div class="light-points">' + '<span></span>'.repeat(12) + '</div>';
+    bg.innerHTML = '<div class="light-points">' + '<span></span>'.repeat(12) + '</div>';
     hero.insertBefore(bg, hero.firstChild);
+  } else {
+    const bg = hero.querySelector('.hero-industrial-bg');
+    bg.innerHTML = '<div class="light-points">' + '<span></span>'.repeat(12) + '</div>';
   }
 }
 
